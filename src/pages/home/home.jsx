@@ -4,7 +4,7 @@ import { movies } from "../../data/movies";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { Search } from "lucide-react";
 
-import "./Home.css";
+import "./home.css";
 
 function Home() {
 

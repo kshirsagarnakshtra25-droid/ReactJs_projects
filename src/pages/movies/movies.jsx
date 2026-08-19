@@ -5,7 +5,7 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { movies } from "../../data/movies";
 
-import "./Movies.css";
+import "./movies.css";
 
 function Movies() {
   const [searchParams] = useSearchParams();
