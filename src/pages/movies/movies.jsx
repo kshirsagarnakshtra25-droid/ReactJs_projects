@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Search, SlidersHorizontal } from "lucide-react";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
@@ -7,8 +8,8 @@ import { movies } from "../../data/movies";
 import "./Movies.css";
 
 function Movies() {
-
-  const [search, setSearch] = useState("");
+  const [searchParams] = useSearchParams();
+  const [search, setSearch] = useState(() => searchParams.get("search") || "");
 
   const [language, setLanguage] = useState("All");
 
