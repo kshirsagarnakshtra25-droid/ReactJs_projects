@@ -6,6 +6,7 @@ import MovieCard from "../../components/MovieCard/MovieCard";
 import { movies } from "../../data/movies";
 
 import "./movies.css";
+import BackButton from "../../components/BackButton/BackButton";
 
 function Movies() {
   const [searchParams] = useSearchParams();
@@ -14,6 +15,7 @@ function Movies() {
   const [language, setLanguage] = useState("All");
 
   const [genre, setGenre] = useState("All");
+  const [industry, setIndustry] = useState("All");
 
   const [sort, setSort] = useState("default");
 
@@ -39,11 +41,13 @@ function Movies() {
         genre.toLowerCase()
       );
 
+    const matchesIndustry = industry === "All" || movie.industry === industry;
+
 
     return (
       matchesSearch &&
       matchesLanguage &&
-      matchesGenre
+      matchesGenre && matchesIndustry
     );
 
   });
@@ -75,6 +79,7 @@ function Movies() {
   return (
 
     <div className="movies-page">
+      <BackButton />
 
       {/* Header */}
 
@@ -156,9 +161,21 @@ function Movies() {
             <option value="Marathi">
               Marathi
             </option>
+            <option value="Telugu">Telugu</option>
 
           </select>
 
+        </div>
+
+        <div className="filter-group">
+          <label>Industry</label>
+          <select value={industry} onChange={(e) => setIndustry(e.target.value)}>
+            <option value="All">All Industries</option>
+            <option value="Bollywood">Bollywood</option>
+            <option value="Hollywood">Hollywood</option>
+            <option value="Tollywood">Tollywood</option>
+            <option value="Marathi">Marathi</option>
+          </select>
         </div>
 
 

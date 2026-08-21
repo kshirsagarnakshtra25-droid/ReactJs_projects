@@ -12,7 +12,11 @@ import Activities from "./pages/Activities/Activities";
 import ExperienceDetails from "./pages/ExperienceDetails/ExperienceDetails";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Login from "./pages/Auth/Login";
+import PaymentDetails from "./pages/PaymentDetails/PaymentDetails";
 import Register from "./pages/Auth/Register";
+import MyBookings from "./pages/MyBookings/MyBookings";
+import Wishlist from "./pages/Wishlist/Wishlist";
+
 
 function AppLayout() {
   return <><Navbar /><Outlet /></>;
@@ -30,11 +34,15 @@ function App() {
           <Route path="/movies/:id" element={<MovieDetails />} />
           <Route path="/booking/:id" element={<Booking />} />
           <Route path="/booking-summary/:id" element={<BookingSummary />} />
+          <Route path="/booking-summary" element={<BookingSummary />} />
           <Route path="/events" element={<Events />} />
           <Route path="/plays" element={<Plays />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/experience/:id" element={<ExperienceDetails />} />
+          <Route path="/payment-details"element={<PaymentDetails />}/>
+          <Route path="/my-bookings" element={<MyBookings />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

@@ -11,7 +11,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfWFeLFDk1wGh-tzbcWZQw3HjmbVh4jpEeYfPn4vNerA&s",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLoLN1uKqHNJU0j02CjDstAPmhrfss2KOG5v-Y3kMwUg&s=10",
     description: "An emotional action drama about love, redemption and sacrifice.",
-    cast: ["Emraan Hashmi", "Disha Patani"]
+    cast: ["Emraan Hashmi", "Disha Patani"], industry: "Bollywood", status: "released"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSylxEAuJxyQkCOiLgHYdPjWlM4DWJ-SgvQP8FjprVEw&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4sJI9kOAu0MTojunBY-rCPJ-z2V3WSuhSB8SZb1q9w&s=10",
     description: "A patriotic war drama following the courage of Indian soldiers.",
-    cast: ["Sunny Deol", "Varun Dhawan", "Diljit Dosanjh"]
+    cast: ["Sunny Deol", "Varun Dhawan", "Diljit Dosanjh"], industry: "Bollywood", status: "released"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLdsenKC2PPwxPy7BKlctVfLR8LHOAJ5jdY4Pz8S1ZzA&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpbhdGGIk0MomBjtMTAiPR-U4xP3E0yduylA8G2ELU9Q&s=10",
     description: "A high-intensity spy action thriller.",
-    cast: ["Ranveer Singh", "Arjun Rampal"]
+    cast: ["Ranveer Singh", "Arjun Rampal"], industry: "Bollywood", status: "released"
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuia6hd8K4YmlKyGes_PsBK55KsOJ5pddmy_ovLUdN-Q&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAMwi5lW5lkVQa9RPXxssqcuEvGyPv1aFr0k6vOKVUDA&s=10",
     description: "An epic romantic drama.",
-    cast: ["Ranbir Kapoor", "Alia Bhatt", "Vicky Kaushal"]
+    cast: ["Ranbir Kapoor", "Alia Bhatt", "Vicky Kaushal"], industry: "Bollywood", status: "upcoming"
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzniLjwEy9GEsiMLz7rJITNOn5q62KA_PfilUYofUyfg&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfo94AjcAaqhYh24npqUlXyaFIk68at4hTfDaouZEPQ&s=10",
     description: "A cinematic adaptation of the Ramayana.",
-    cast: ["Ranbir Kapoor", "Sai Pallavi", "Yash"]
+    cast: ["Ranbir Kapoor", "Sai Pallavi", "Yash"], industry: "Bollywood", status: "upcoming"
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKxvq-eCaqvB9lADDo4tSg6HTpwYCs35xYfHT_Hfv03g&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA56iTOpqoglNjMPxQKkV_Yhr7iiS8rouz656JGyYBCA&s=10",
     description: "A dark action thriller.",
-    cast: ["Yash", "Nayanthara"]
+    cast: ["Yash", "Nayanthara"], industry: "Bollywood", status: "upcoming"
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT04f22U5mZwbscbNQkbK-aIobif9kdidHBhPk6aUK5Kw&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-DybN7rI3Depf5x5Q9q8-o_GZYjO6-olf96ghyK-uJA&s=10",
     description: "A historical drama based on India's Partition.",
-    cast: ["Sunny Deol", "Preity Zinta"]
+    cast: ["Sunny Deol", "Preity Zinta"], industry: "Bollywood", status: "released"
   },
   {
     id: 8,
@@ -109,6 +109,12 @@ export const movies = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTt6NR0_hh9JBy57oMQRl4cdbNRdAxYY7z5zqz0C_eiA&s=10",
     banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2l2EXhfuXVuZCjhQCRa9V5i_1M7NPAmksleUIg-eKfQ&s=10",
     description: "A comedy-drama featuring the Khosla family.",
-    cast: ["Anupam Kher", "Boman Irani"]
-  }
+    cast: ["Anupam Kher", "Boman Irani"], industry: "Bollywood", status: "upcoming"
+  },
+  { id: 9, title: "Sky Force", genre: "Action / Adventure", language: "English", rating: "8.1", duration: "2h 12m", certificate: "UA", releaseDate: "21 Aug 2026", image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=1600&q=80", description: "A crew races beyond the horizon to bring everyone home.", cast: ["Alex Morgan", "Maya Chen"], industry: "Hollywood", status: "released" },
+  { id: 10, title: "The Last Signal", genre: "Sci-Fi / Thriller", language: "English", rating: "7.9", duration: "2h 05m", certificate: "UA", releaseDate: "5 Sep 2026", image: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=80", description: "One transmission changes the fate of a distant world.", cast: ["Noah James", "Elena Ruiz"], industry: "Hollywood", status: "upcoming" },
+  { id: 11, title: "Veera Mallu", genre: "Action / Period Drama", language: "Telugu", rating: "8.4", duration: "2h 35m", certificate: "UA", releaseDate: "18 Aug 2026", image: "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&w=1600&q=80", description: "A fearless rebel fights for freedom and honour.", cast: ["Arjun Rao", "Nisha Varma"], industry: "Tollywood", status: "released" },
+  { id: 12, title: "Mana Ooru", genre: "Drama / Family", language: "Telugu", rating: "8.0", duration: "2h 18m", certificate: "U", releaseDate: "12 Sep 2026", image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&w=1600&q=80", description: "A heartfelt homecoming that reunites an entire village.", cast: ["Kiran Teja", "Riya Das"], industry: "Tollywood", status: "upcoming" },
+  { id: 13, title: "Ghar Wapsi", genre: "Drama / Comedy", language: "Marathi", rating: "8.3", duration: "2h 08m", certificate: "U", releaseDate: "20 Aug 2026", image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80", description: "A warm story of family, friendship and finding your way back.", cast: ["Siddharth Jadhav", "Mukti Mohan"], industry: "Marathi", status: "released" },
+  { id: 14, title: "Morya", genre: "Musical / Drama", language: "Marathi", rating: "8.2", duration: "2h 16m", certificate: "U", releaseDate: "29 Aug 2026", image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80", banner: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80", description: "Music and memories lead a young artist through Pune.", cast: ["Amey Wagh", "Sai Tamhankar"], industry: "Marathi", status: "upcoming" }
 ];

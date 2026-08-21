@@ -1,34 +1,15 @@
 export const cinemas = [
-  {
-    id: 1,
-    name: "PVR INOX",
-    location: "Phoenix Marketcity, Pune",
-    distance: "3.2 km",
-    formats: ["2D", "IMAX"],
-    times: ["10:00 AM", "1:30 PM", "4:45 PM", "7:30 PM", "10:15 PM"]
-  },
-  {
-    id: 2,
-    name: "Cinepolis",
-    location: "Seasons Mall, Pune",
-    distance: "5.1 km",
-    formats: ["2D", "3D"],
-    times: ["11:00 AM", "2:15 PM", "5:30 PM", "8:15 PM"]
-  },
-  {
-    id: 3,
-    name: "City Pride",
-    location: "Kothrud, Pune",
-    distance: "6.4 km",
-    formats: ["2D"],
-    times: ["9:30 AM", "12:45 PM", "4:00 PM", "7:15 PM"]
-  },
-  {
-    id: 4,
-    name: "INOX",
-    location: "Bund Garden, Pune",
-    distance: "7.2 km",
-    formats: ["2D", "IMAX"],
-    times: ["10:30 AM", "1:45 PM", "5:00 PM", "8:30 PM"]
-  }
+  { id: 1, city: "Pune", name: "PVR INOX", location: "Phoenix Marketcity, Pune", distance: "3.2 km", formats: ["2D", "IMAX"], times: ["10:00 AM", "1:30 PM", "4:45 PM", "7:30 PM", "10:15 PM"] },
+  { id: 2, city: "Pune", name: "Cinepolis", location: "Seasons Mall, Pune", distance: "5.1 km", formats: ["2D", "3D"], times: ["11:00 AM", "2:15 PM", "5:30 PM", "8:15 PM"] },
+  { id: 3, city: "Pune", name: "City Pride", location: "Kothrud, Pune", distance: "6.4 km", formats: ["2D"], times: ["9:30 AM", "12:45 PM", "4:00 PM", "7:15 PM"] },
+  { id: 4, city: "Pune", name: "INOX", location: "Bund Garden, Pune", distance: "7.2 km", formats: ["2D", "IMAX"], times: ["10:30 AM", "1:45 PM", "5:00 PM", "8:30 PM"] },
+  { id: 5, city: "Mumbai", name: "PVR ICON", location: "Phoenix Palladium, Mumbai", distance: "2.1 km", formats: ["2D", "IMAX"], times: ["10:15 AM", "1:20 PM", "4:35 PM", "7:45 PM"] },
+  { id: 6, city: "Mumbai", name: "INOX", location: "R-City Mall, Ghatkopar, Mumbai", distance: "5.4 km", formats: ["2D", "3D"], times: ["11:00 AM", "2:10 PM", "5:20 PM", "8:30 PM"] },
+  { id: 7, city: "Kolhapur", name: "PVR Cinemas", location: "DYP City Mall, Kolhapur", distance: "3.8 km", formats: ["2D", "3D"], times: ["10:30 AM", "1:40 PM", "4:50 PM", "8:00 PM"] },
+  { id: 8, city: "Kolhapur", name: "Inox Multiplex", location: "Shahupuri, Kolhapur", distance: "6.2 km", formats: ["2D"], times: ["11:15 AM", "2:25 PM", "6:00 PM"] },
+  { id: 9, city: "Baner, Pune", name: "PVR Market City", location: "Baner Road, Pune", distance: "1.8 km", formats: ["2D", "4DX"], times: ["10:00 AM", "1:15 PM", "4:30 PM", "7:40 PM"] },
+  { id: 10, city: "Baner, Pune", name: "Cinepolis", location: "Westend Mall, Aundh, Pune", distance: "3.6 km", formats: ["2D", "3D"], times: ["11:30 AM", "2:40 PM", "5:50 PM", "9:00 PM"] },
+  { id: 11, city: "Akluj", name: "Akluj Cinema", location: "Station Road, Akluj", distance: "1.4 km", formats: ["2D"], times: ["12:00 PM", "3:15 PM", "6:30 PM", "9:15 PM"] },
+  { id: 12, city: "Solapur", name: "PVR Cinemas", location: "Hutatma Chowk, Solapur", distance: "2.9 km", formats: ["2D", "3D"], times: ["10:45 AM", "2:00 PM", "5:15 PM", "8:30 PM"] },
+  { id: 13, city: "Solapur", name: "E-Square", location: "Railway Lines, Solapur", distance: "5.7 km", formats: ["2D"], times: ["11:15 AM", "2:30 PM", "6:15 PM"] },
 ];
