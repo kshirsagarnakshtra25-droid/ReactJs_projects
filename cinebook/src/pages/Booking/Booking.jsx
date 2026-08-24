@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   MapPin,
@@ -11,6 +11,7 @@ import { movies } from "../../data/movies";
 import { cinemas } from "../../data/cinemas";
 
 import "./Booking.css";
+import BackButton from "../../components/BackButton/BackButton";
 
 function Booking() {
 
@@ -33,6 +34,23 @@ function Booking() {
 
   const [selectedSeats, setSelectedSeats] =
     useState([]);
+
+  const [selectedLocation, setSelectedLocation] = useState(
+    () => localStorage.getItem("cinebookLocation") || "Pune"
+  );
+
+  useEffect(() => {
+    const updateLocation = () => {
+      setSelectedLocation(localStorage.getItem("cinebookLocation") || "Pune");
+      setSelectedCinema(null);
+      setSelectedTime(null);
+      setSelectedSeats([]);
+    };
+    window.addEventListener("cinebook-location-change", updateLocation);
+    return () => window.removeEventListener("cinebook-location-change", updateLocation);
+  }, []);
+
+  const locationCinemas = cinemas.filter((cinema) => cinema.city === selectedLocation);
 
 
   if (!movie) {
@@ -165,20 +183,21 @@ function Booking() {
 
 
     navigate(
-      `/booking-summary/${movie.id}`,
-      {
-        state: {
-          movie,
-          date: dates[selectedDate],
-          cinema: selectedCinema,
-          time: selectedTime,
-          seats: selectedSeats,
-          subtotal,
-          convenienceFee,
-          total
-        }
-      }
-    );
+  "/payment-details",
+  {
+    state: {
+      movie,
+      date: dates[selectedDate],
+      cinema: selectedCinema,
+      time: selectedTime,
+      seats: selectedSeats,
+      subtotal,
+      convenienceFee,
+      total,
+      ticketPrice
+    }
+  }
+);
   }
 
 
@@ -213,6 +232,12 @@ function Booking() {
 
         </div>
 
+      </div>
+
+      <div className="booking-progress" aria-label="Booking progress">
+        <span className="complete">1 <small>Show</small></span><i></i>
+        <span className={selectedCinema ? "complete" : ""}>2 <small>Seats</small></span><i></i>
+        <span>3 <small>Payment</small></span>
       </div>
 
 
@@ -287,7 +312,7 @@ function Booking() {
           <MapPin size={20} />
 
           <h2>
-            Select Cinema
+            Select Cinema in {selectedLocation}
           </h2>
 
         </div>
@@ -295,7 +320,7 @@ function Booking() {
 
         <div className="cinema-list">
 
-          {cinemas.map(
+          {locationCinemas.length ? locationCinemas.map(
             (cinema) => (
 
               <div
@@ -377,7 +402,7 @@ function Booking() {
               </div>
 
             )
-          )}
+          ) : <div className="no-cinemas"><h3>No cinemas listed for {selectedLocation} yet.</h3><p>Please choose Pune, Mumbai, Kolhapur, Baner, Pune, Akluj, or Solapur from the location menu.</p></div>}
 
         </div>
 
@@ -508,6 +533,8 @@ function Booking() {
           <strong>
             ₹{total}
           </strong>
+
+          <small>{selectedCinema ? `${selectedCinema.name}${selectedTime ? ` · ${selectedTime}` : ""}` : "Choose a cinema and showtime"}</small>
 
         </div>
 

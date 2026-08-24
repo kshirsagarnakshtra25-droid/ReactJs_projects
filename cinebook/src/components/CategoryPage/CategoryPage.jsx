@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, CalendarDays, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import "./CategoryPage.css";
 
@@ -9,6 +10,8 @@ function CategoryPage({
   category,
   items
 }) {
+  const [location, setLocation] = useState(() => localStorage.getItem("cinebookLocation") || "Pune");
+  useEffect(() => { const updateLocation = () => setLocation(localStorage.getItem("cinebookLocation") || "Pune"); window.addEventListener("cinebook-location-change", updateLocation); return () => window.removeEventListener("cinebook-location-change", updateLocation); }, []);
 
   return (
 
@@ -38,20 +41,20 @@ function CategoryPage({
       {/* =========================
           LOCATION
       ========================= */}
-
+{/* 
       <div className="location-bar">
 
         <MapPin size={18} />
 
         <span>
-          Pune
+          {location}
         </span>
 
-        <button>
+        <button onClick={() => document.querySelector(".location-btn")?.click()}>
           Change
         </button>
 
-      </div>
+      </div> */}
 
 
       {/* =========================

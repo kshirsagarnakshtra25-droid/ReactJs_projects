@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+
 import {
   Star,
   Play,
@@ -10,6 +11,7 @@ import {
 import { movies } from "../../data/movies";
 
 import "./MovieDetails.css";
+import BackButton from "../../components/BackButton/BackButton";
 
 function MovieDetails() {
 
@@ -43,19 +45,23 @@ function MovieDetails() {
   }
 
 
-  return (
+ return (
 
-    <div className="movie-details">
+  <div className="movie-details">
 
-      {/* Hero */}
+    <div className="movie-back-wrapper">
+      <BackButton />
+    </div>
 
-      <section
-        className="movie-details-hero"
-        style={{
-          backgroundImage:
-            `url(${movie.banner})`
-        }}
-      >
+    {/* Hero */}
+
+    <section
+      className="movie-details-hero"
+      style={{
+        backgroundImage:
+          `url(${movie.banner})`
+      }}
+    >
 
         <div className="movie-details-overlay"></div>
 

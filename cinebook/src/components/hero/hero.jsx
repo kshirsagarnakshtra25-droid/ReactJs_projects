@@ -1,5 +1,5 @@
 import { Search, Play } from "lucide-react";
-import "./Hero.css";
+import "./hero.css";
 
 function Hero() {
 

@@ -61,6 +61,12 @@ function BookingSummary() {
     total
   } = booking;
 
+  const formattedDate = (options) => {
+    if (date instanceof Date) return date.toLocaleDateString("en-IN", options);
+    const parsedDate = new Date(date);
+    return Number.isNaN(parsedDate.getTime()) ? date : parsedDate.toLocaleDateString("en-IN", options);
+  };
+
 
   function confirmBooking() {
 
@@ -145,14 +151,11 @@ function BookingSummary() {
                   <span>Date</span>
 
                   <strong>
-                    {date.toLocaleDateString(
-                      "en-IN",
-                      {
+                  {formattedDate({
                         day: "numeric",
                         month: "short",
                         year: "numeric"
-                      }
-                    )}
+                    })}
                   </strong>
 
                 </div>
@@ -399,15 +402,12 @@ function BookingSummary() {
                     </span>
 
                     <strong>
-                      {date.toLocaleDateString(
-                        "en-IN",
-                        {
+                      {formattedDate({
                           weekday: "short",
                           day: "numeric",
                           month: "short",
                           year: "numeric"
-                        }
-                      )}
+                        })}
                     </strong>
 
                   </div>

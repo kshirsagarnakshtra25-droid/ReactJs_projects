@@ -222,11 +222,17 @@ function ExperienceDetails() {
 
 
           <button
-            onClick={() =>
-              alert(
-                "Ticket booking will be added next!"
-              )
-            }
+            onClick={() => navigate("/payment-details", { state: {
+              movieName: experience.title,
+              moviePoster: experience.image,
+              theatreName: experience.location,
+              date: experience.date,
+              showTime: "Event entry",
+              selectedSeats: ["1 Ticket"],
+              ticketPrice: Number(experience.price.replace(/\D/g, "")) || 499,
+              convenienceFee: 49,
+              experience: true
+            } })}
           >
 
             <Ticket size={18} />
