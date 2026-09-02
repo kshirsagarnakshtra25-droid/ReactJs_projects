@@ -22475,3 +22475,1484 @@ img {
     font-size: 52px;
   }
 }
+
+/* =========================================================
+   SMASH ARENA — FINAL RESPONSIVE OVERRIDES
+   These rules are intentionally placed at the end so they
+   override desktop sizing without changing the JSX.
+========================================================= */
+
+/* Prevent horizontal overflow everywhere */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+/* -------------------------
+   DESKTOP / LARGE LAPTOP
+------------------------- */
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .desktop-nav {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 10px;
+  }
+
+  .hero-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-title {
+    font-size: clamp(78px, 10vw, 145px);
+  }
+
+  .hero-visual {
+    transform: scale(0.9);
+  }
+}
+
+/* -------------------------
+   TABLET — 769 to 1024
+------------------------- */
+
+@media (max-width: 1024px) {
+  .navbar {
+    min-height: 76px;
+    padding: 16px 5%;
+  }
+
+  .desktop-nav {
+    gap: 13px;
+  }
+
+  .nav-link {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .nav-join {
+    padding: 11px 13px;
+    gap: 9px;
+    font-size: 9px;
+  }
+
+  .brand-symbol {
+    width: 39px;
+    height: 39px;
+  }
+
+  .brand-symbol span {
+    font-size: 21px;
+  }
+
+  .brand-name span {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .brand-name strong {
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 80px 6% 70px;
+  }
+
+  .hero-content {
+    max-width: 850px;
+  }
+
+  .hero-title {
+    font-size: clamp(85px, 15vw, 150px);
+  }
+
+  .hero-description {
+    max-width: 650px;
+  }
+
+  .hero-visual {
+    height: 500px;
+    margin-top: 15px;
+    transform: scale(0.9);
+  }
+
+  .visual-ring.ring-one {
+    width: 430px;
+    height: 430px;
+  }
+
+  .visual-ring.ring-two {
+    width: 330px;
+    height: 330px;
+  }
+
+  .visual-ring.ring-three {
+    width: 240px;
+    height: 240px;
+  }
+
+  /* Make common two-column sections stack */
+  .about-grid,
+  .training-grid,
+  .coaches-grid,
+  .membership-grid,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Generic responsive containers */
+  .about-page section,
+  .training-page section,
+  .coaches-page section,
+  .players-page section,
+  .tournaments-page section,
+  .membership-page section,
+  .contact-page section {
+    max-width: 100%;
+  }
+
+  /* Common card grids */
+  .players-grid,
+  .player-grid,
+  .coaches-grid,
+  .coach-grid,
+  .tournaments-grid,
+  .tournament-grid,
+  .training-cards,
+  .training-grid-cards,
+  .membership-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* Keep text and large headings inside the viewport */
+  .about-page h1,
+  .training-page h1,
+  .coaches-page h1,
+  .players-page h1,
+  .tournaments-page h1,
+  .membership-page h1,
+  .contact-page h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* -------------------------
+   MOBILE NAVBAR
+   Works with both the original
+   desktop navigation and common
+   mobile-menu class names.
+------------------------- */
+
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 70px;
+    padding: 13px 5%;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .brand-symbol {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    min-width: 0;
+  }
+
+  .brand-name span {
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+
+  .brand-name strong {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+  }
+
+  /* Hide the desktop navigation on phones */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .nav-join {
+    padding: 10px 12px;
+    font-size: 8px;
+    gap: 7px;
+    white-space: nowrap;
+  }
+
+  .nav-join b {
+    font-size: 14px;
+  }
+
+  /* If a hamburger exists in the JSX, make it touch friendly */
+  .menu-button,
+  .menu-toggle,
+  .hamburger,
+  .mobile-menu-button {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid rgba(198, 255, 0, 0.35);
+    color: var(--lime);
+  }
+
+  .menu-button span,
+  .menu-toggle span,
+  .hamburger span,
+  .mobile-menu-button span {
+    width: 21px;
+    height: 2px;
+    display: block;
+    background: currentColor;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  /* Common mobile nav panel */
+  .mobile-nav,
+  .mobile-menu,
+  .navbar-mobile {
+    position: fixed;
+    z-index: 999;
+    top: 70px;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    padding: 22px 6% 30px;
+    background: rgba(8, 11, 10, 0.98);
+    border-top: 1px solid rgba(198, 255, 0, 0.15);
+    backdrop-filter: blur(20px);
+  }
+
+  .mobile-nav a,
+  .mobile-menu a,
+  .navbar-mobile a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 6% 45px;
+    gap: 25px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-top-line {
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 20px;
+  }
+
+  .hero-small-text {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .hero-title {
+    width: 100%;
+    font-size: clamp(64px, 18vw, 112px);
+    line-height: 0.76;
+    letter-spacing: -3px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin: 30px 0 24px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 18px;
+  }
+
+  .hero-controls {
+    width: 100%;
+    margin-top: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .counter-line {
+    width: 65px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 410px;
+    margin-top: 5px;
+    transform: scale(0.78);
+    transform-origin: center;
+  }
+
+  .visual-ring.ring-one {
+    width: 360px;
+    height: 360px;
+  }
+
+  .visual-ring.ring-two {
+    width: 275px;
+    height: 275px;
+  }
+
+  .visual-ring.ring-three {
+    width: 210px;
+    height: 210px;
+  }
+
+  /* Prevent decorative objects from causing page width */
+  .home-bg,
+  .bg-grid,
+  .bg-glow {
+    max-width: 100vw;
+  }
+
+  .floating-particle {
+    width: 3px;
+    height: 3px;
+  }
+
+  /* Generic page headings */
+  .section-title,
+  .page-title,
+  .hero-title,
+  .gallery-hero h1,
+  .gallery-header h2,
+  .gallery-statement-content h2,
+  .gallery-final-content h2 {
+    overflow-wrap: anywhere;
+  }
+
+  /* Generic cards */
+  .players-grid,
+  .player-grid,
+  .coaches-grid,
+  .coach-grid,
+  .tournaments-grid,
+  .tournament-grid,
+  .training-cards,
+  .training-grid-cards,
+  .membership-cards {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Generic flex rows */
+  .section-header,
+  .page-header,
+  .content-header,
+  .stats-row,
+  .feature-row,
+  .card-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px;
+  }
+
+  /* Generic buttons */
+  .cta-buttons,
+  .action-buttons,
+  .page-buttons {
+    width: 100%;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .cta-buttons a,
+  .action-buttons a,
+  .page-buttons a,
+  .cta-buttons button,
+  .action-buttons button,
+  .page-buttons button {
+    width: 100%;
+  }
+
+  /* Gallery */
+  .gallery-hero {
+    min-height: 72vh;
+    padding: 115px 6% 75px;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(58px, 17vw, 96px);
+    line-height: 0.82;
+  }
+
+  .gallery-hero-number {
+    right: -70px;
+    font-size: 145px;
+  }
+
+  .gallery-main-section {
+    width: 88%;
+    padding: 65px 0 80px;
+  }
+
+  .gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .gallery-header h2 {
+    font-size: clamp(48px, 14vw, 70px);
+  }
+
+  .gallery-filter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .gallery-filter-button {
+    min-height: 40px;
+    padding: 10px 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 360px !important;
+    gap: 12px !important;
+  }
+
+  .gallery-card,
+  .gallery-card.gallery-large,
+  .gallery-card.gallery-small,
+  .gallery-card.gallery-wide,
+  .gallery-card.gallery-tall,
+  .gallery-card:nth-child(n) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    height: 360px !important;
+    min-height: 0 !important;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-card-info {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .gallery-card-info h3 {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+
+  .gallery-card-arrow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gallery-statement {
+    min-height: 620px;
+    padding: 75px 7%;
+  }
+
+  .gallery-statement-content {
+    width: 100%;
+  }
+
+  .gallery-statement-content h2 {
+    font-size: clamp(48px, 14vw, 66px);
+  }
+
+  .gallery-statement-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-statement-buttons a {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .gallery-court-visual {
+    width: 110%;
+    right: -35%;
+    opacity: 0.10;
+  }
+
+  .gallery-final {
+    min-height: 470px;
+    padding: 75px 7%;
+  }
+
+  .gallery-final-content {
+    width: 100%;
+  }
+
+  .gallery-final-content h2 {
+    font-size: clamp(50px, 14vw, 70px);
+  }
+
+  .gallery-final-content > a {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .gallery-lightbox {
+    padding: 12px;
+  }
+
+  .gallery-lightbox-box {
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  .gallery-lightbox-box > img {
+    width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+  }
+
+  .gallery-lightbox-details {
+    padding: 18px;
+  }
+
+  .gallery-lightbox-details h3 {
+    font-size: 24px;
+  }
+
+  .gallery-close {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* -------------------------
+   SMALL MOBILE — 480px
+------------------------- */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 11px 4%;
+  }
+
+  .brand-symbol {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .brand-symbol span {
+    font-size: 18px;
+  }
+
+  .brand-name span {
+    font-size: 9px;
+  }
+
+  .brand-name strong {
+    font-size: 14px;
+  }
+
+  .nav-join {
+    padding: 9px 10px;
+    font-size: 7px;
+  }
+
+  .hero-section {
+    padding: 60px 5% 35px;
+  }
+
+  .hero-title {
+    font-size: clamp(56px, 19vw, 82px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .hero-controls {
+    justify-content: space-between;
+  }
+
+  .hero-visual {
+    height: 340px;
+    transform: scale(0.64);
+  }
+
+  .visual-ring.ring-one {
+    width: 320px;
+    height: 320px;
+  }
+
+  .visual-ring.ring-two {
+    width: 245px;
+    height: 245px;
+  }
+
+  .visual-ring.ring-three {
+    width: 180px;
+    height: 180px;
+  }
+
+  .gallery-grid {
+    grid-auto-rows: 330px !important;
+  }
+
+  .gallery-card,
+  .gallery-card.gallery-large,
+  .gallery-card.gallery-small,
+  .gallery-card.gallery-wide,
+  .gallery-card.gallery-tall,
+  .gallery-card:nth-child(n) {
+    height: 330px !important;
+  }
+
+  .gallery-hero-number {
+    right: -90px;
+    font-size: 125px;
+  }
+
+  .gallery-hero-counter strong {
+    font-size: 34px;
+  }
+
+  .gallery-statement {
+    min-height: 590px;
+  }
+
+  .gallery-final {
+    min-height: 440px;
+  }
+}
+
+/* -------------------------
+   VERY SMALL MOBILE — 360px
+------------------------- */
+
+@media (max-width: 360px) {
+  .navbar {
+    min-height: 64px;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .nav-join {
+    padding: 8px 9px;
+  }
+
+  .hero-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-title {
+    font-size: 55px;
+    line-height: 0.8;
+  }
+
+  .hero-top-line {
+    gap: 6px;
+  }
+
+  .hero-small-text {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .hero-visual {
+    height: 300px;
+    transform: scale(0.55);
+  }
+
+  .gallery-hero h1 {
+    font-size: 53px;
+  }
+
+  .gallery-header h2 {
+    font-size: 44px;
+  }
+
+  .gallery-grid {
+    grid-auto-rows: 300px !important;
+  }
+
+  .gallery-card,
+  .gallery-card.gallery-large,
+  .gallery-card.gallery-small,
+  .gallery-card.gallery-wide,
+  .gallery-card.gallery-tall,
+  .gallery-card:nth-child(n) {
+    height: 300px !important;
+  }
+
+  .gallery-card-info h3 {
+    font-size: 23px;
+  }
+
+  .gallery-statement-content h2 {
+    font-size: 45px;
+  }
+
+  .gallery-final-content h2 {
+    font-size: 47px;
+  }
+}
+
+/* -------------------------
+   TOUCH DEVICES
+   Keep every visual effect,
+   but don't make hover the only
+   way to reveal important UI.
+------------------------- */
+
+@media (hover: none) and (pointer: coarse) {
+  .gallery-card:hover,
+  .primary-btn:hover,
+  .secondary-btn:hover,
+  .nav-join:hover,
+  .gallery-statement-buttons a:hover,
+  .gallery-final-content > a:hover {
+    transform: none;
+  }
+
+  .gallery-card-arrow {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .gallery-card-overlay {
+    opacity: 0.25;
+  }
+}
+
+/* -------------------------
+   LANDSCAPE PHONES
+------------------------- */
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-section {
+    padding-top: 55px;
+  }
+
+  .hero-visual {
+    height: 360px;
+  }
+
+  .gallery-hero {
+    min-height: 100vh;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .gallery-card,
+  .gallery-card.gallery-large,
+  .gallery-card.gallery-small,
+  .gallery-card.gallery-wide,
+  .gallery-card.gallery-tall,
+  .gallery-card:nth-child(n) {
+    height: 300px !important;
+  }
+}
+
+/* -------------------------
+   REDUCED MOTION ACCESSIBILITY
+------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE / TABLET HERO FIX
+   - Keeps the 3D court visible on smaller screens
+   - Keeps BOTH slider arrows inside the viewport
+   - Prevents controls from being clipped horizontally
+   - Preserves the animated court / glow / orbit effects
+========================================================= */
+
+.hero-section,
+.hero-content,
+.hero-right,
+.hero-controls {
+  max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .hero-section {
+    min-height: auto !important;
+    padding: 105px 5% 135px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  /* IMPORTANT: previous CSS hid the court below 1000px.
+     This override intentionally brings it back. */
+  .hero-right {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 360px !important;
+    margin-top: 5px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  .hero-court {
+    display: block !important;
+    width: min(520px, 82vw) !important;
+    max-width: 520px !important;
+    aspect-ratio: 1.3 !important;
+    transform: perspective(900px) rotateX(55deg) rotateZ(-10deg) !important;
+    transform-origin: center center !important;
+  }
+
+  .court-glow {
+    inset: -55px !important;
+  }
+
+  .court-badge {
+    width: 115px !important;
+    height: 115px !important;
+  }
+
+  .court-badge strong {
+    font-size: 19px !important;
+  }
+
+  .court-orbit.orbit-one {
+    width: 118% !important;
+    height: 118% !important;
+  }
+
+  .court-orbit.orbit-two {
+    width: 136% !important;
+    height: 78% !important;
+  }
+
+  .hero-controls {
+    left: 5% !important;
+    right: 5% !important;
+    bottom: 28px !important;
+    width: 90% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  .hero-control {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .hero-progress {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-progress-item {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .hero-progress-item div {
+    width: clamp(22px, 5vw, 45px) !important;
+  }
+
+  .hero-scroll {
+    display: none !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero-section {
+    padding: 105px 20px 125px !important;
+  }
+
+  .hero-content {
+    gap: 5px !important;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-right {
+    min-height: 300px !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-court {
+    width: min(390px, 88vw) !important;
+    transform: perspective(760px) rotateX(53deg) rotateZ(-9deg) !important;
+  }
+
+  .court-badge {
+    width: 96px !important;
+    height: 96px !important;
+  }
+
+  .court-badge span {
+    font-size: 9px !important;
+  }
+
+  .court-badge strong {
+    font-size: 16px !important;
+  }
+
+  .court-badge small {
+    font-size: 6px !important;
+    margin-top: 4px !important;
+  }
+
+  .hero-controls {
+    left: 20px !important;
+    right: 20px !important;
+    width: calc(100% - 40px) !important;
+    bottom: 22px !important;
+    gap: 8px !important;
+  }
+
+  .hero-control {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 16px !important;
+  }
+
+  .hero-progress {
+    gap: 5px !important;
+  }
+
+  .hero-progress-item div {
+    width: clamp(18px, 7vw, 32px) !important;
+  }
+
+  .hero-progress-item span {
+    display: none !important;
+  }
+}
+
+/* Small phones such as iPhone 16 Pro Max / 440px and below */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 16px 118px !important;
+  }
+
+  .hero-right {
+    min-height: 275px !important;
+  }
+
+  .hero-court {
+    width: min(350px, 88vw) !important;
+    transform: perspective(680px) rotateX(51deg) rotateZ(-8deg) !important;
+  }
+
+  .court-badge {
+    width: 82px !important;
+    height: 82px !important;
+  }
+
+  .court-badge span {
+    font-size: 8px !important;
+  }
+
+  .court-badge strong {
+    font-size: 14px !important;
+  }
+
+  .court-badge small {
+    font-size: 5px !important;
+  }
+
+  .hero-controls {
+    left: 16px !important;
+    right: 16px !important;
+    width: calc(100% - 32px) !important;
+    bottom: 18px !important;
+  }
+
+  .hero-control {
+    flex-basis: 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .hero-progress-item div {
+    width: 22px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .hero-section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    padding-bottom: 112px !important;
+  }
+
+  .hero-right {
+    min-height: 245px !important;
+  }
+
+  .hero-court {
+    width: 290px !important;
+  }
+
+  .court-badge {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .hero-controls {
+    left: 14px !important;
+    right: 14px !important;
+    width: calc(100% - 28px) !important;
+    gap: 5px !important;
+  }
+
+  .hero-control {
+    flex-basis: 39px !important;
+    width: 39px !important;
+    height: 39px !important;
+  }
+
+  .hero-progress {
+    gap: 3px !important;
+  }
+
+  .hero-progress-item div {
+    width: 17px !important;
+  }
+}
+
+/* =========================================================
+   FINAL NAVBAR SAFETY FOR THE ACTUAL SMASH ARENA JSX
+========================================================= */
+
+@media (max-width: 1000px) {
+  .main-navbar {
+    z-index: 1000 !important;
+  }
+
+  .navbar-links {
+    z-index: 1001 !important;
+  }
+
+  .menu-button {
+    position: relative;
+    z-index: 1002 !important;
+  }
+}
+
+
+/* =========================================================
+   SMASH ARENA — MOBILE HERO / COURT FINAL PATCH v2
+   Matches Home.jsx exactly.
+   The hero controls are taken OUT of absolute positioning on
+   phones so they can never sit on top of JOIN THE ARENA.
+========================================================= */
+
+.hero-section,
+.hero-content,
+.hero-left,
+.hero-right,
+.hero-buttons,
+.hero-controls {
+  min-width: 0 !important;
+}
+
+@media (max-width: 1000px) {
+  .hero-section {
+    display: block !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 105px 5% 45px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+    margin: 0 !important;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-buttons {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* NEVER hide the court on tablet/mobile */
+  .hero-right {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    min-height: 300px !important;
+    height: 300px !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .hero-court {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 5 !important;
+    width: min(500px, 78vw) !important;
+    max-width: 500px !important;
+    aspect-ratio: 1.3 !important;
+    flex: 0 0 auto !important;
+    transform: perspective(850px) rotateX(54deg) rotateZ(-9deg) !important;
+    transform-origin: center center !important;
+    animation: courtFloat 7s ease-in-out infinite !important;
+  }
+
+  .court-glow {
+    display: block !important;
+    inset: -55px !important;
+  }
+
+  .court-lines,
+  .court-outer,
+  .court-center-line,
+  .court-service-line,
+  .court-side-line,
+  .court-net,
+  .court-badge,
+  .court-orbit {
+    visibility: visible !important;
+  }
+
+  /* Controls belong to normal document flow on tablet/mobile */
+  .hero-controls {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    z-index: 30 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  .hero-control {
+    position: relative !important;
+    z-index: 31 !important;
+    flex: 0 0 46px !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-progress {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+
+  .hero-progress-item {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-progress-item div {
+    width: clamp(18px, 5vw, 42px) !important;
+  }
+
+  .hero-scroll {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-section {
+    padding: 95px 20px 32px !important;
+  }
+
+  .hero-content {
+    gap: 8px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(58px, 17vw, 86px) !important;
+    line-height: 0.77 !important;
+    letter-spacing: -0.055em !important;
+  }
+
+  .hero-description {
+    margin-top: 24px !important;
+    margin-bottom: 20px !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 9px !important;
+    margin-top: 22px !important;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: 100% !important;
+    min-height: 50px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-right {
+    min-height: 245px !important;
+    height: 245px !important;
+    margin-top: 2px !important;
+  }
+
+  .hero-court {
+    width: min(350px, 88vw) !important;
+    transform: perspective(700px) rotateX(51deg) rotateZ(-8deg) !important;
+  }
+
+  .court-glow {
+    inset: -42px !important;
+  }
+
+  .court-badge {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  .court-badge span {
+    font-size: 8px !important;
+  }
+
+  .court-badge strong {
+    font-size: 15px !important;
+  }
+
+  .court-badge small {
+    font-size: 5px !important;
+  }
+
+  .hero-controls {
+    margin-top: 10px !important;
+    gap: 6px !important;
+  }
+
+  .hero-control {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+  }
+
+  .hero-progress {
+    gap: 4px !important;
+  }
+
+  .hero-progress-item div {
+    width: 20px !important;
+  }
+
+  .hero-progress-item span {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 88px !important;
+  }
+
+  .hero-title {
+    font-size: 56px !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 9px !important;
+    letter-spacing: 0.13em !important;
+  }
+
+  .hero-description {
+    font-size: 12px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-right {
+    min-height: 215px !important;
+    height: 215px !important;
+  }
+
+  .hero-court {
+    width: 285px !important;
+    max-width: 285px !important;
+    transform: perspective(620px) rotateX(49deg) rotateZ(-7deg) !important;
+  }
+
+  .court-badge {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .court-badge strong {
+    font-size: 12px !important;
+  }
+
+  .hero-controls {
+    margin-top: 8px !important;
+    gap: 4px !important;
+  }
+
+  .hero-control {
+    flex: 0 0 38px !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    font-size: 15px !important;
+  }
+
+  .hero-progress {
+    gap: 3px !important;
+  }
+
+  .hero-progress-item div {
+    width: 17px !important;
+  }
+}
