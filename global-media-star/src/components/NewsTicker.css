@@ -1,0 +1,191 @@
+/* =========================================================
+   GLOBAL MEDIA STAR
+   TRENDING NEWS TICKER
+   MIDNIGHT NAVY + CHAMPAGNE GOLD + IVORY
+========================================================= */
+
+.news-ticker {
+  width: 100%;
+
+  display: flex;
+  align-items: stretch;
+
+  background: #0B1726;
+
+  border-bottom: 1px solid rgba(201, 164, 76, 0.25);
+
+  overflow: hidden;
+}
+
+.ticker-label {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 17px 25px;
+
+  background: #C9A44C;
+
+  color: #07111D !important;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+}
+
+.ticker-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #07111D;
+
+  animation: tickerPulse 1.5s ease-in-out infinite;
+}
+
+.ticker-wrapper {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 52px;
+}
+
+.ticker-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  animation: tickerMove 35s linear infinite;
+}
+
+.ticker-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 0 35px;
+
+  color: #F7F4EC !important;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.ticker-star {
+  color: #C9A44C !important;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes tickerMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+@keyframes tickerPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+
+    opacity: 0.5;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ticker-label {
+    padding: 15px 18px;
+
+    font-size: 9px;
+  }
+
+  .ticker-item {
+    padding: 0 25px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .ticker-label {
+    padding: 14px 12px;
+
+    gap: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .ticker-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .ticker-item {
+    gap: 10px;
+
+    padding: 0 20px;
+
+    font-size: 9px;
+  }
+
+}

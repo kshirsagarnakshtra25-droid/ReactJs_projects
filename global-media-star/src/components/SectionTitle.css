@@ -1,0 +1,66 @@
+.section-title {
+  margin-bottom: 45px;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 13px;
+
+  color: #C9A44C;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.section-eyebrow span {
+  width: 30px;
+  height: 1px;
+
+  background: #C9A44C;
+}
+
+.section-title h2 {
+  color: #0B1726;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.section-title p {
+  max-width: 650px;
+
+  margin-top: 15px;
+
+  color: #7B8490;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .section-title p {
+    font-size: 12px;
+  }
+}

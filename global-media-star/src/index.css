@@ -1,0 +1,112 @@
+/* =========================================================
+   GLOBAL MEDIA STAR — GLOBAL STYLES
+========================================================= */
+
+:root {
+
+    /* ---------- Brand ---------- */
+
+    --navy: #0B1726;
+    --navy-dark: #07111D;
+    --navy-light: #101F33;
+    --card-navy: #16263A;
+
+
+    /* ---------- Champagne Gold ---------- */
+
+    --gold: #C9A44C;
+    --gold-light: #E3C875;
+    --gold-dark: #9C762A;
+
+
+    /* ---------- Light ---------- */
+
+    --ivory: #F7F4EC;
+    --white: #FFFFFF;
+
+
+    /* ---------- Text ---------- */
+
+    --black: #18202A;
+    --gray: #7B8490;
+    --gray-light: #AAB1BA;
+
+
+    /* ---------- Borders ---------- */
+
+    --border-light: #D9D4C8;
+    --border-dark: rgba(255, 255, 255, 0.10);
+
+
+    /* ---------- Layout ---------- */
+
+    --container: 1240px;
+
+
+    /* ---------- Animation ---------- */
+
+    --transition: 0.35s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--ivory);
+
+    color: var(--black);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.container {
+    width: min(90%, var(--container));
+    margin: 0 auto;
+}

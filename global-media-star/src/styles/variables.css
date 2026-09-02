@@ -1,0 +1,21 @@
+:root {
+  --midnight-navy: #0B132B;
+  --deep-navy: #060B1A;
+
+  --champagne-gold: #D4AF6A;
+  --light-champagne: #E8CC91;
+
+  --ivory: #F7F3E8;
+  --soft-white: #F8F8F5;
+  --muted-ivory: #D9D5C8;
+
+  --soft-gold-border: #BFA15F;
+
+  --max-width: 1400px;
+
+  --transition: all 0.3s ease;
+
+  --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 35px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.18);
+}

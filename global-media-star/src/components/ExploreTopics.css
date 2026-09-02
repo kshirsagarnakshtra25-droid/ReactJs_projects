@@ -1,0 +1,236 @@
+/* =========================================================
+   EXPLORE TOPICS
+========================================================= */
+
+.topics-section {
+  background: #FFFFFF;
+  padding: 100px 0;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.topics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: #D9D4C8;
+
+  border: 1px solid #D9D4C8;
+}
+
+
+/* =========================================================
+   TOPIC CARD
+========================================================= */
+
+.topic-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 250px;
+
+  padding: 30px;
+
+  background: #FFFFFF;
+
+  color: #0B1726;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+
+/* Gold hover line */
+
+.topic-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #C9A44C;
+
+  transition: 0.4s ease;
+}
+
+.topic-card:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.topic-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.topic-number {
+  color: #B4AFA5;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 14px;
+}
+
+.topic-top i {
+  color: #C9A44C;
+
+  font-size: 22px;
+
+  transition: 0.35s ease;
+}
+
+.topic-card:hover .topic-top i {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.topic-card h3 {
+  margin-top: 40px;
+
+  color: #0B1726;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.topic-card:hover h3 {
+  color: #9C762A;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.topic-card p {
+  max-width: 300px;
+
+  margin-top: 10px;
+
+  color: #7B8490;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.topic-arrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: auto;
+  padding-top: 25px;
+
+  color: #9C762A;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+.topic-arrow i {
+  transition: 0.3s ease;
+}
+
+.topic-card:hover .topic-arrow i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.topic-card:hover {
+  background: #F7F4EC;
+
+  z-index: 2;
+
+  box-shadow:
+    0 12px 35px rgba(11, 23, 38, 0.08);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .topics-section {
+    padding: 70px 0;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-card {
+    min-height: 220px;
+
+    padding: 25px;
+  }
+
+  .topic-card h3 {
+    margin-top: 30px;
+
+    font-size: 26px;
+  }
+
+}

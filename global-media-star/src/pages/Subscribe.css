@@ -1,0 +1,407 @@
+/* =========================================
+   SUBSCRIBE PAGE
+========================================= */
+
+.subscribe-page {
+  min-height: 100vh;
+
+  background: #0b1726;
+
+  color: white;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.subscribe-section {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(201, 164, 76, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(201, 164, 76, 0.08),
+      transparent 30%
+    ),
+    #0b1726;
+}
+
+
+/* =========================================
+   CONTENT BOX
+========================================= */
+
+/* =========================================
+   PREMIUM SUBSCRIBE CARD
+========================================= */
+
+.subscribe-container {
+  width: min(1000px, 92%);
+
+  min-height: 520px;
+
+  padding: 75px 90px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 38, 58, 0.98),
+      rgba(7, 17, 29, 0.98)
+    );
+
+  border: 1px solid rgba(201, 164, 76, 0.35);
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+/* TOP GOLD LINE */
+
+.subscribe-container::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 2px;
+
+  background: #c9a44c;
+}
+
+
+/* DECORATIVE CIRCLE */
+
+.subscribe-container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 164, 76, 0.12);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.subscribe-small-title {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 25px;
+
+  color: #e3c875;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.subscribe-container h1 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  font-size: clamp(50px, 7vw, 82px);
+
+  line-height: 0.95;
+
+  font-weight: 300;
+
+  color: #ffffff;
+}
+
+.subscribe-container h1 span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #c9a44c;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.subscribe-container p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 680px;
+
+  margin: 32px auto 35px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.subscribe-form {
+  position: relative;
+  z-index: 3;
+
+  width: min(680px, 100%);
+
+  display: flex;
+
+  padding: 5px;
+
+  margin: 0 auto 18px;
+
+  background: #ffffff;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* INPUT */
+
+.subscribe-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 58px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #18202a;
+
+  font-size: 15px;
+}
+
+
+/* BUTTON */
+
+.subscribe-form button {
+  width: 170px;
+
+  height: 58px;
+
+  border: none;
+
+  border-radius: 2px;
+
+  background: #c9a44c;
+
+  color: #0b1726;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: #e3c875;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(201, 164, 76, 0.3);
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.subscribe-note {
+  position: relative;
+  z-index: 2;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .subscribe-container {
+    width: 94%;
+
+    min-height: auto;
+
+    padding: 55px 25px;
+  }
+
+  .subscribe-container h1 {
+    font-size: 48px;
+  }
+
+  .subscribe-container p {
+    font-size: 14px;
+
+    margin: 25px auto;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+
+    padding: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    gap: 10px;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+
+    height: 56px;
+
+    background: #ffffff;
+
+    border-radius: 3px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+
+    height: 56px;
+  }
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.subscribe-note {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .subscribe-section {
+    padding: 60px 15px;
+  }
+
+  .subscribe-container {
+    padding: 55px 20px;
+  }
+
+  .subscribe-container h1 {
+    font-size: 48px;
+  }
+
+  .subscribe-container p {
+    font-size: 15px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+
+    padding: 0;
+
+    background: transparent;
+
+    gap: 10px;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+
+    height: 55px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+
+    height: 55px;
+  }
+}

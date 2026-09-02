@@ -1,0 +1,321 @@
+/* =========================================
+   SIGN IN PAGE
+========================================= */
+
+.signin-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f1014,
+      #18191f,
+      #0f1014
+    );
+
+}
+
+
+/* =========================================
+   SIGN IN CARD
+========================================= */
+
+.signin-card {
+
+  width: 100%;
+
+  max-width: 440px;
+
+  padding: 42px;
+
+  background: #1b1c22;
+
+  border: 1px solid #303139;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55);
+
+  text-align: center;
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.signin-logo {
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+
+}
+
+.signin-logo span {
+
+  color: #f84464;
+
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.signin-icon {
+
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(248, 68, 100, 0.12);
+
+  font-size: 30px;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.signin-card h1 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 26px;
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.signin-description {
+
+  margin: 12px 0 30px;
+
+  color: #999ba5;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.signin-card form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  text-align: left;
+
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.input-group label {
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group input {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid #383a43;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #25262d;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+
+}
+
+
+.input-group input::placeholder {
+
+  color: #777983;
+
+}
+
+
+.input-group input:focus {
+
+  border-color: #f84464;
+
+  box-shadow:
+    0 0 0 3px rgba(248, 68, 100, 0.12);
+
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.signin-submit {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #f84464;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+
+.signin-submit:hover {
+
+  background: #ff5a76;
+
+  transform: translateY(-1px);
+
+}
+
+
+.signin-submit:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+}
+
+
+/* =========================================
+   SECURITY NOTE
+========================================= */
+
+.signin-note {
+
+  margin-top: 25px;
+
+  color: #777983;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .signin-page {
+
+    padding: 20px;
+
+  }
+
+  .signin-card {
+
+    padding: 30px 22px;
+
+  }
+
+  .signin-card h1 {
+
+    font-size: 23px;
+
+  }
+
+}

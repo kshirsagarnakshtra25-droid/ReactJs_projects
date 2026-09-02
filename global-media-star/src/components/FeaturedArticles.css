@@ -1,0 +1,336 @@
+/* =========================================================
+   FEATURED ARTICLES
+========================================================= */
+/* =========================================================
+   FEATURED STORIES — 6 PREMIUM CARDS
+========================================================= */
+
+.featured-section {
+  background: #f7f4ec;
+}
+
+
+/* GRID */
+
+.featured-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* CARD */
+
+.featured-card {
+  position: relative;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.5s cubic-bezier(.2,.7,.2,1),
+    box-shadow 0.5s ease;
+
+  border: 1px solid rgba(20,30,40,0.06);
+}
+
+
+.featured-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 30px 70px rgba(7,17,29,0.16);
+}
+
+
+/* FIRST CARD BIG */
+
+.featured-card-large {
+  grid-column: span 2;
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 1fr;
+}
+
+
+/* IMAGE */
+
+.featured-image {
+  position: relative;
+
+  height: 330px;
+
+  overflow: hidden;
+}
+
+
+.featured-card-large .featured-image {
+  height: 100%;
+
+  min-height: 430px;
+}
+
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.featured-card:hover .featured-image img {
+  transform: scale(1.1);
+}
+
+
+/* IMAGE OVERLAY */
+
+.featured-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.75)
+    );
+}
+
+
+/* NUMBER */
+
+.featured-number {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  background: #c9a44c;
+
+  color: #111;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  z-index: 2;
+}
+
+
+/* CATEGORY */
+
+.featured-category {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  z-index: 2;
+}
+
+
+/* CONTENT */
+
+.featured-content {
+  padding: 32px;
+}
+
+
+.featured-content-category {
+  color: #c9a44c;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.featured-content h3 {
+  margin-top: 14px;
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+}
+
+
+.featured-content p {
+  margin-top: 18px;
+
+  color: #747d87;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.featured-content a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 24px;
+
+  color: #18202a;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid #c9a44c;
+
+  padding-bottom: 7px;
+
+  transition: 0.3s;
+}
+
+
+.featured-content a:hover {
+  color: #c9a44c;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FEATURED CARD GOLD LINE
+========================================================= */
+
+.featured-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #c9a44c;
+
+  z-index: 10;
+
+  transition: width 0.6s ease;
+}
+
+
+.featured-card:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FEATURED CARD 2-6
+========================================================= */
+
+.featured-card:not(.featured-card-large) {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.featured-card:not(.featured-card-large) .featured-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.featured-card:not(.featured-card-large) .featured-content a {
+  margin-top: auto;
+
+  padding-top: 22px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .featured-card-large {
+    grid-column: span 2;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .featured-card-large {
+    grid-column: auto;
+
+    display: block;
+  }
+
+
+  .featured-card-large .featured-image {
+    height: 350px;
+
+    min-height: 0;
+  }
+
+
+  .featured-image {
+    height: 280px;
+  }
+
+
+  .featured-content {
+    padding: 25px;
+  }
+
+
+  .featured-content h3 {
+    font-size: 24px;
+  }
+
+}
